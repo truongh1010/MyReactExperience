@@ -2,12 +2,16 @@
 import "./ExpenseItem.css";
 
 function ExpenseItem() {
+  const expenseDate = new Date(2022, 2, 13);
+  const expenseTitle = "Food";
+  const expenseAmount = 14.99;
+
   return (
     <div className="expense-item">
-      <div>Feb 2nd 2023</div>
+      <div>{expenseDate.toISOString()}</div>
       <div className="expense-item__description">
-        <h2>Food</h2>
-        <div className="expense-item__price">$14.99</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">${expenseAmount}</div>
       </div>
     </div>
   );
