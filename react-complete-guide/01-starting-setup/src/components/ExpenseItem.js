@@ -1,5 +1,6 @@
 // this component represent a single expense item
 import "./ExpenseItem.css";
+import ExpenseDate from "./ExpenseDate";
 
 // react function takes one parameter as ann object
 // this object will hold all the values we get for the attributes on custom element
@@ -10,7 +11,7 @@ function ExpenseItem(props) {
 
   return (
     <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+      <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
