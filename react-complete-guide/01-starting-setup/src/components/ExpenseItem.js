@@ -1,6 +1,7 @@
 // this component represent a single expense item
 import "./ExpenseItem.css";
 import ExpenseDate from "./ExpenseDate";
+import Card from "./Card";
 
 // react function takes one parameter as ann object
 // this object will hold all the values we get for the attributes on custom element
@@ -10,13 +11,13 @@ function ExpenseItem(props) {
   // const expenseAmount = 14.99;
 
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
