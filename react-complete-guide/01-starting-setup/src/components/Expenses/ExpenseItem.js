@@ -6,17 +6,21 @@ import Card from "../UI/Card";
 // react function takes one parameter as ann object
 // this object will hold all the values we get for the attributes on custom element
 function ExpenseItem(props) {
-  // const expenseDate = new Date(2022, 2, 13);
-  // const expenseTitle = "Food";
-  // const expenseAmount = 14.99;
+  let title = props.title;
+
+  const clickHandler = () => {
+    title = "Updated";
+    console.log("clicked!!");
+  };
 
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date}></ExpenseDate>
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
+        <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 }
