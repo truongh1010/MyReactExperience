@@ -1,5 +1,5 @@
 // this component represent a single expense item
-import React, { useState } from "react";
+import React from "react";
 // useState function provided by React lib,
 // this function allows us to define values as state,
 // where changes to these values should reflect in the component function
